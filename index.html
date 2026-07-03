@@ -3,50 +3,73 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kushal Prakasam — Senior Automation & Security Engineer</title>
-<meta name="description" content="J P Kushal Prakasam — Senior Automation & Security Engineer in Bengaluru. 6 years across test automation, application security, DevSecOps, GRC and AWS security. ISTQB certified. 1,500+ critical bugs found." />
+<title>Kushal Prakasam · Senior Automation & Security Engineer</title>
+<meta name="description" content="J P Kushal Prakasam, Senior Automation & Security Engineer in Bengaluru. 6 years across test automation, application security, DevSecOps, GRC and AWS security. ISTQB certified. 1,500+ critical bugs found." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0a0f1a;
-    --panel:#0f1626;
-    --panel-2:#121b2e;
-    --line:#1e2a42;
-    --ink:#e7edf7;
-    --muted:#8b98ad;
-    --amber:#f2b04a;
-    --pass:#39d98a;
-    --fail:#f0645c;
+    --bg:#030710;
+    --panel:#081120;
+    --panel-2:#0b1830;
+    --line:#14283f;
+    --cyan:#53d7ff;
+    --cyan-hi:#bdf0ff;
+    --ink:#e2f4ff;
+    --muted:#7e93a6;
     --radius:14px;
-    --display:'Archivo',sans-serif;
+    --display:'Orbitron',sans-serif;
     --mono:'IBM Plex Mono',monospace;
     --body:'Inter',system-ui,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
-  ::selection{background:var(--amber);color:#0a0f1a}
-  a{color:var(--amber);text-decoration:none}
+  body{
+    background-color:var(--bg);
+    background-image:
+      linear-gradient(rgba(83,215,255,.030) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(83,215,255,.030) 1px,transparent 1px);
+    background-size:56px 56px;
+    background-attachment:fixed;
+    color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--cyan);color:#03101c}
+  a{color:var(--cyan);text-decoration:none}
   a:hover{text-decoration:underline}
+<<<<<<< Updated upstream
   a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
 
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+=======
+  a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ---------- scroll reveal (cards & stats) ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  .reveal:nth-child(2){transition-delay:.08s}
+  .reveal:nth-child(3){transition-delay:.16s}
+  .reveal:nth-child(4){transition-delay:.24s}
+>>>>>>> Stashed changes
 
   /* ---------- nav ---------- */
-  nav{position:sticky;top:0;z-index:50;background:rgba(10,15,26,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{position:sticky;top:0;z-index:50;background:rgba(3,7,16,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
   .logo{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--ink)}
-  .logo .p{color:var(--pass)}
+  .logo .p{color:var(--cyan)}
   .nav-links{display:flex;gap:26px;font-family:var(--mono);font-size:13px}
   .nav-links a{color:var(--muted)}
-  .nav-links a:hover{color:var(--ink);text-decoration:none}
+  .nav-links a:hover{color:var(--cyan-hi);text-decoration:none;text-shadow:0 0 12px rgba(83,215,255,.6)}
+  .music-btn{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--muted);background:var(--panel);
+    border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;margin-left:20px}
+  .music-btn:hover{color:var(--ink);border-color:var(--muted)}
+  .music-btn[aria-pressed="true"]{color:var(--cyan);border-color:rgba(83,215,255,.55);text-shadow:0 0 12px rgba(83,215,255,.6)}
   @media(max-width:720px){.nav-links{display:none}}
 
   /* ---------- hero ---------- */
   header{padding:88px 0 72px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
   header::before{content:"";position:absolute;inset:0;background:
+<<<<<<< Updated upstream
     radial-gradient(600px 300px at 80% 0%,rgba(242,176,74,.07),transparent 70%),
     radial-gradient(500px 320px at 10% 100%,rgba(57,217,138,.05),transparent 70%);pointer-events:none}
   .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;position:relative}
@@ -54,16 +77,27 @@
   .eyebrow{font-family:var(--mono);font-size:13px;color:var(--pass);letter-spacing:.04em;margin-bottom:18px}
   h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,64px);line-height:1.02;letter-spacing:-.02em;text-transform:uppercase}
   h1 .accent{color:var(--amber)}
+=======
+    radial-gradient(640px 340px at 76% 34%,rgba(83,215,255,.10),transparent 70%),
+    radial-gradient(520px 340px at 8% 100%,rgba(83,215,255,.05),transparent 70%);pointer-events:none}
+  .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center;position:relative}
+  @media(max-width:880px){.hero{grid-template-columns:1fr;gap:56px}}
+  .eyebrow{font-family:var(--mono);font-size:13px;color:var(--cyan);letter-spacing:.04em;margin-bottom:18px}
+  h1{font-family:var(--display);font-weight:900;font-size:clamp(30px,4.6vw,48px);line-height:1.12;letter-spacing:.02em;text-transform:uppercase;
+    text-shadow:0 0 30px rgba(83,215,255,.25)}
+  h1 .accent{color:var(--cyan);text-shadow:0 0 22px rgba(83,215,255,.7)}
+>>>>>>> Stashed changes
   .tagline{margin-top:20px;color:var(--muted);font-size:17px;max-width:46ch}
   .tagline strong{color:var(--ink);font-weight:600}
   .cta-row{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
   .btn{font-family:var(--mono);font-size:14px;font-weight:600;padding:12px 22px;border-radius:10px;border:1px solid var(--line);display:inline-block}
   .btn:hover{text-decoration:none}
-  .btn-primary{background:var(--amber);color:#0a0f1a;border-color:var(--amber)}
-  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-primary{background:var(--cyan);color:#03101c;border-color:var(--cyan);box-shadow:0 0 22px rgba(83,215,255,.35)}
+  .btn-primary:hover{box-shadow:0 0 34px rgba(83,215,255,.55)}
   .btn-ghost{color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--muted)}
+  .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan-hi)}
 
+<<<<<<< Updated upstream
   /* terminal */
   .term{background:#0b1120;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 24px 60px rgba(0,0,0,.45);overflow:hidden}
   .term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
@@ -89,73 +123,186 @@
     html{scroll-behavior:auto}
     .t-line{animation:none;opacity:1;transform:none}
   }
+=======
+  /* ---------- TRON ENERGY CORE ---------- */
+  .core-wrap{position:relative;width:min(420px,88vw);aspect-ratio:1;margin:0 auto}
+  /* outer orbit line (companies travel here) */
+  .ring.r-outer{position:absolute;inset:1%;border-radius:50%;border:1px solid rgba(83,215,255,.22)}
+  /* segmented energy ring, like a Tron identity disc */
+  .seg{position:absolute;inset:13%;border-radius:50%;
+    background:conic-gradient(
+      var(--cyan) 0deg 64deg,  transparent 64deg 90deg,
+      var(--cyan) 90deg 154deg, transparent 154deg 180deg,
+      var(--cyan) 180deg 244deg,transparent 244deg 270deg,
+      var(--cyan) 270deg 334deg,transparent 334deg 360deg);
+    -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 7px),#000 calc(100% - 6px));
+    mask:radial-gradient(farthest-side,transparent calc(100% - 7px),#000 calc(100% - 6px));
+    filter:drop-shadow(0 0 8px rgba(83,215,255,.7));
+    animation:spin 18s linear infinite}
+  .seg.s2{inset:19%;opacity:.4;animation-direction:reverse;animation-duration:28s;
+    -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));
+    mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px))}
+  /* inner orbit: intentionally EMPTY, just a faint guide ring */
+  .ring.r-inner{position:absolute;inset:27%;border-radius:50%;border:1px dashed rgba(83,215,255,.14)}
+  /* the core itself */
+  .core-center{position:absolute;inset:35%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 50% 42%,#eaffff 0%,#9beaff 16%,rgba(83,215,255,.30) 42%,#050f1e 72%);
+    border:1px solid rgba(83,215,255,.6);
+    box-shadow:0 0 30px rgba(83,215,255,.45),0 0 90px rgba(83,215,255,.22),inset 0 0 34px rgba(83,215,255,.35);
+    animation:pulse 3.2s ease-in-out infinite}
+  .core-center b{font-family:var(--display);font-weight:900;font-size:clamp(36px,8.5vw,50px);color:#04121f;line-height:1;
+    text-shadow:0 0 14px rgba(234,255,255,.9)}
+  .core-center span{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:#0a2438;font-weight:600;margin-top:5px;text-align:center}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 0 30px rgba(83,215,255,.45),0 0 90px rgba(83,215,255,.22),inset 0 0 34px rgba(83,215,255,.35)}
+    50%{box-shadow:0 0 46px rgba(83,215,255,.65),0 0 130px rgba(83,215,255,.32),inset 0 0 44px rgba(83,215,255,.5)}
+  }
+  /* orbiting companies (outer orbit only) */
+  .rot{position:absolute;inset:1%;animation:spin 46s linear infinite;animation-delay:var(--d,0s)}
+  .rot .node{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);animation:cspin 46s linear infinite;animation-delay:var(--d,0s)}
+  .node{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--cyan-hi);background:rgba(8,17,32,.92);
+    border:1px solid rgba(83,215,255,.45);border-radius:999px;padding:6px 13px;white-space:nowrap;
+    box-shadow:0 0 14px rgba(83,215,255,.25),0 6px 18px rgba(0,0,0,.5)}
+  .node em{font-style:normal;color:var(--cyan);margin-right:6px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes cspin{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+  .core-cap{margin-top:18px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+  /* ---------- ENERGY CONDUIT (scroll-driven) ---------- */
+  .flow-in{position:relative;max-width:1080px;margin:0 auto;padding:0 24px}
+  .conduit{position:absolute;top:0;bottom:0;left:29px;width:2px;background:rgba(83,215,255,.10);border-radius:2px}
+  .conduit .socket{position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);width:11px;height:11px;
+    background:var(--cyan);box-shadow:0 0 16px var(--cyan)}
+  .conduit .fill{position:absolute;top:0;left:0;width:100%;height:0;
+    background:linear-gradient(180deg,rgba(83,215,255,.25),var(--cyan));
+    box-shadow:0 0 10px rgba(83,215,255,.6);border-radius:2px}
+  .conduit .head{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;
+    background:#eaffff;box-shadow:0 0 14px var(--cyan),0 0 36px var(--cyan)}
+>>>>>>> Stashed changes
 
   /* ---------- sections ---------- */
-  section{padding:76px 0;border-bottom:1px solid var(--line)}
-  .sec-label{font-family:var(--mono);font-size:13px;color:var(--pass);margin-bottom:10px}
+  .flow-in section{padding:76px 0 76px 56px;border-bottom:1px solid var(--line)}
+  @media(max-width:720px){
+    .flow-in{padding:0 16px}
+    .conduit{left:19px}
+    .flow-in section{padding-left:36px}
+  }
+  .sec-label{font-family:var(--mono);font-size:13px;color:var(--cyan);margin-bottom:10px}
   .sec-label .kw{color:var(--muted)}
-  h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.01em;text-transform:uppercase;margin-bottom:34px}
+  h2{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:.03em;text-transform:uppercase;margin-bottom:34px}
+  /* zones dim until the energy reaches them */
+  .zone .sec-label,.zone h2{opacity:.4;transition:opacity .5s ease,text-shadow .5s ease}
+  .zone.lit .sec-label,.zone.lit h2{opacity:1}
+  .zone.lit h2{text-shadow:0 0 22px rgba(83,215,255,.4)}
 
   /* stats strip */
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
   @media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
   .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
-  .stat b{font-family:var(--display);font-size:28px;font-weight:800;color:var(--amber);display:block;line-height:1.1}
+  .stat b{font-family:var(--display);font-size:24px;font-weight:800;color:var(--cyan);display:block;line-height:1.15;text-shadow:0 0 16px rgba(83,215,255,.4)}
   .stat span{font-family:var(--mono);font-size:12px;color:var(--muted)}
 
+<<<<<<< Updated upstream
+=======
+  /* proficiency bars */
+  .prof-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;margin-bottom:44px}
+  @media(max-width:760px){.prof-grid{grid-template-columns:1fr}}
+  .prof{font-family:var(--mono);font-size:13px}
+  .prof .prow{display:flex;justify-content:space-between;margin-bottom:7px}
+  .prof .pname{color:var(--ink)}
+  .prof .pval{color:var(--cyan)}
+  .bar{height:7px;background:var(--panel-2);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;border-radius:999px;
+    background:linear-gradient(90deg,#1d6f96,var(--cyan),var(--cyan-hi));
+    box-shadow:0 0 10px rgba(83,215,255,.55);
+    transition:width 1.2s cubic-bezier(.25,.8,.3,1)}
+  .in .bar i{width:var(--w)}
+
+>>>>>>> Stashed changes
   /* skills */
   .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   @media(max-width:760px){.skill-grid{grid-template-columns:1fr}}
   .skill-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-  .skill-card h3{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--amber);margin-bottom:14px}
+  .skill-card h3{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--cyan);margin-bottom:14px}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
   .chip{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
 
-  /* experience */
-  .job{position:relative;padding-left:34px;margin-bottom:52px}
-  .job:last-child{margin-bottom:0}
-  .job::before{content:"";position:absolute;left:8px;top:8px;bottom:-44px;width:1px;background:var(--line)}
-  .job:last-child::before{bottom:8px}
-  .job::after{content:"";position:absolute;left:3px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--pass);box-shadow:0 0 0 4px rgba(57,217,138,.12)}
-  .job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:6px}
-  .job-head h3{font-family:var(--display);font-size:20px;font-weight:700}
-  .job-meta{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-  .role{font-family:var(--mono);font-size:13px;color:var(--amber);margin-bottom:14px}
+  /* ---------- experience: energized cards ---------- */
+  .job{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;margin-bottom:26px;
+    opacity:.35;filter:saturate(.35);
+    transition:opacity .5s ease,filter .5s ease,border-color .5s ease,box-shadow .5s ease}
+  .job.lit{opacity:1;filter:none;border-color:rgba(83,215,255,.45);
+    box-shadow:0 0 26px rgba(83,215,255,.10),inset 0 0 26px rgba(83,215,255,.04)}
+  /* connector dot sitting on the conduit */
+  .job::before{content:"";position:absolute;left:-56px;top:30px;width:12px;height:12px;border-radius:50%;
+    background:var(--panel-2);border:1px solid var(--line);transition:background .4s ease,box-shadow .4s ease}
+  .job.lit::before{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+  /* short branch from conduit into the card */
+  .job::after{content:"";position:absolute;left:-44px;top:35px;width:44px;height:2px;
+    background:rgba(83,215,255,.10);transition:background .4s ease,box-shadow .4s ease}
+  .job.lit::after{background:var(--cyan);box-shadow:0 0 8px rgba(83,215,255,.6)}
+  @media(max-width:720px){
+    .job::before{left:-36px}
+    .job::after{left:-24px;width:24px}
+  }
+  .job-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-bottom:4px}
+  .job-head h3{font-family:var(--display);font-size:17px;font-weight:800;letter-spacing:.03em}
+  .job-meta{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+  .role{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--cyan);
+    border:1px solid rgba(83,215,255,.35);border-radius:999px;padding:4px 12px;margin:8px 0 16px}
   .job ul{list-style:none}
-  .job li{position:relative;padding-left:22px;color:#c3cddd;margin-bottom:10px;font-size:15px}
-  .job li::before{content:"✓";position:absolute;left:0;color:var(--pass);font-family:var(--mono);font-size:13px}
+  .job li{position:relative;padding-left:22px;color:#bcd7ea;margin-bottom:10px;font-size:15px}
+  .job li::before{content:"▸";position:absolute;left:0;color:var(--cyan);font-family:var(--mono);font-size:13px}
   .job li b{color:var(--ink);font-weight:600}
 
   /* achievements */
   .ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   @media(max-width:860px){.ach-grid{grid-template-columns:1fr}}
   .ach{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-  .ach .badge{font-family:var(--mono);font-size:11px;color:var(--pass);border:1px solid rgba(57,217,138,.35);border-radius:999px;padding:4px 10px;display:inline-block;margin-bottom:14px}
-  .ach h3{font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:8px}
+  .ach .badge{font-family:var(--mono);font-size:11px;color:var(--cyan);border:1px solid rgba(83,215,255,.4);border-radius:999px;padding:4px 10px;display:inline-block;margin-bottom:14px}
+  .ach h3{font-family:var(--display);font-size:15px;font-weight:800;letter-spacing:.02em;margin-bottom:8px}
   .ach p{color:var(--muted);font-size:14.5px}
 
   /* education */
   .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media(max-width:760px){.edu-grid{grid-template-columns:1fr}}
   .edu{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-  .edu h3{font-family:var(--display);font-size:17px;font-weight:700;margin-bottom:4px}
+  .edu h3{font-family:var(--display);font-size:14.5px;font-weight:800;letter-spacing:.02em;margin-bottom:4px}
   .edu p{font-family:var(--mono);font-size:13px;color:var(--muted)}
 
   /* contact */
+<<<<<<< Updated upstream
   .contact{ text-align:center;padding:90px 0}
+=======
+  .contact{text-align:center}
+>>>>>>> Stashed changes
   .contact h2{margin-bottom:14px}
   .contact p{color:var(--muted);max-width:52ch;margin:0 auto 30px}
   .contact-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 
   footer{padding:34px 0;text-align:center;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-  footer .p{color:var(--pass)}
+  footer .p{color:var(--cyan)}
+
+  /* ---------- reduced motion ---------- */
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .core-center{animation:none}
+    .seg,.seg.s2{animation:none}
+    .rot,.rot .node{animation:none}
+    .rot{transform:rotate(var(--ang,0deg))}
+    .rot .node{transform:translate(-50%,-50%) rotate(calc(-1 * var(--ang,0deg)))}
+    .bar i{transition:none}
+    .job,.zone .sec-label,.zone h2{transition:none}
+  }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap nav-in">
-    <div class="logo">kushal<span class="p">@</span>qa:~$</div>
+    <div class="logo">kushal<span class="p">@</span>grid:~$</div>
     <div class="nav-links">
       <a href="#about">about</a>
       <a href="#skills">skills</a>
@@ -163,20 +310,22 @@
       <a href="#achievements">achievements</a>
       <a href="#contact">contact</a>
     </div>
+    <button id="music-btn" class="music-btn" aria-pressed="false" title="Toggle ambient music">♪ sound: off</button>
   </div>
 </nav>
 
 <header>
   <div class="wrap hero">
     <div>
-      <p class="eyebrow">// Bengaluru, India — ISTQB Certified</p>
+      <p class="eyebrow">// Bengaluru, India · ISTQB Certified</p>
       <h1>J P Kushal<br>Prakasam<span class="accent">.</span></h1>
-      <p class="tagline"><strong>Senior Automation & Security Engineer</strong> with 6 years across web, mobile, API and application security — building enterprise-grade automation and shipping <strong>security-hardened products for regulated fintech</strong>.</p>
+      <p class="tagline"><strong>Senior Automation & Security Engineer</strong> with 6 years across web, mobile, API and application security, building enterprise-grade automation and shipping <strong>security-hardened products for regulated fintech</strong>.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Get in touch</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/kushal-prakasam-704116156/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
+<<<<<<< Updated upstream
     <div class="term" aria-label="Terminal showing test run results">
       <div class="term-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -192,18 +341,50 @@
         <div class="t-line t-sum">6 checks passed, 0 failed <span class="t-dim">— ready for production</span></div>
         <div class="t-line t-dim">_</div>
       </div>
+=======
+    <div>
+      <!-- TRON ENERGY CORE: white-hot center, segmented energy rings, empty inner orbit, companies on the outer orbit -->
+      <div class="core-wrap" aria-label="6 years of experience across GenToo, RapL, QuickMove, HKIT Security and Mphasis">
+        <div class="ring r-outer"></div>
+        <div class="seg"></div>
+        <div class="seg s2"></div>
+        <div class="ring r-inner"></div>
+        <div class="rot" style="--d:0s;--ang:0deg"><span class="node"><em>◈</em>GenToo</span></div>
+        <div class="rot" style="--d:-9.2s;--ang:72deg"><span class="node"><em>◈</em>RapL</span></div>
+        <div class="rot" style="--d:-18.4s;--ang:144deg"><span class="node"><em>◈</em>QuickMove</span></div>
+        <div class="rot" style="--d:-27.6s;--ang:216deg"><span class="node"><em>◈</em>HKIT Security</span></div>
+        <div class="rot" style="--d:-36.8s;--ang:288deg"><span class="node"><em>◈</em>Mphasis</span></div>
+        <div class="core-center"><b>6</b><span>YEARS OF<br>EXPERIENCE</span></div>
+      </div>
+      <p class="core-cap">// core output feeds the grid below</p>
+>>>>>>> Stashed changes
     </div>
   </div>
 </header>
 
+<<<<<<< Updated upstream
 <section id="about">
   <div class="wrap">
     <p class="sec-label"><span class="kw">describe(</span>'About'<span class="kw">)</span></p>
     <h2>Quality is a feature</h2>
     <p style="max-width:70ch;color:#c3cddd;font-size:16.5px">
       I design the safety nets that let teams ship fast without breaking things — and without getting breached. My work
+=======
+<main class="flow-in">
+  <div class="conduit" aria-hidden="true">
+    <div class="socket"></div>
+    <div class="fill"></div>
+    <div class="head"></div>
+  </div>
+
+  <section id="about" class="zone">
+    <p class="sec-label"><span class="kw">describe(</span>'About'<span class="kw">)</span></p>
+    <h2>Quality is a feature</h2>
+    <p class="reveal" style="max-width:70ch;color:#bcd7ea;font-size:16.5px">
+      I design the safety nets that let teams ship fast without breaking things, and without getting breached. My work
+>>>>>>> Stashed changes
       spans two disciplines: architecting parallel automation frameworks with <b>Selenium, Playwright, Appium and REST
-      Assured</b>, and hands-on security engineering — <b>web application testing, system security audits, GRC</b>,
+      Assured</b>, and hands-on security engineering across <b>web application testing, system security audits, GRC</b>,
       OWASP API/Mobile Top 10 assessments, and <b>AWS security services (WAF, GuardDuty, IAM)</b>. I practice DevSecOps
       end to end: SonarQube SAST in CI/CD, MobSF static/dynamic mobile analysis, and K6 abuse-pattern load testing.
       Along the way I've led cross-functional QA and security teams, mentored 10+ engineers, and delivered
@@ -215,13 +396,30 @@
       <div class="stat"><b>1,500+</b><span>critical bugs found</span></div>
       <div class="stat"><b>10+</b><span>engineers mentored</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
+<<<<<<< Updated upstream
 <section id="skills">
   <div class="wrap">
     <p class="sec-label"><span class="kw">describe(</span>'Core Competencies'<span class="kw">)</span></p>
     <h2>Toolbelt</h2>
+=======
+  <section id="skills" class="zone">
+    <p class="sec-label"><span class="kw">describe(</span>'Stack & Proficiency'<span class="kw">)</span></p>
+    <h2>Toolbelt</h2>
+
+    <div class="prof-grid">
+      <div class="prof reveal"><div class="prow"><span class="pname">Selenium WebDriver</span><span class="pval">95%</span></div><div class="bar"><i style="--w:95%"></i></div></div>
+      <div class="prof reveal"><div class="prow"><span class="pname">API Testing · REST Assured</span><span class="pval">92%</span></div><div class="bar"><i style="--w:92%"></i></div></div>
+      <div class="prof reveal"><div class="prow"><span class="pname">Playwright</span><span class="pval">90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
+      <div class="prof reveal"><div class="prow"><span class="pname">CI/CD · GitHub Actions · SonarQube</span><span class="pval">90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
+      <div class="prof reveal"><div class="prow"><span class="pname">Appium (Android/iOS)</span><span class="pval">88%</span></div><div class="bar"><i style="--w:88%"></i></div></div>
+      <div class="prof reveal"><div class="prow"><span class="pname">Security Testing · OWASP · MobSF</span><span class="pval">86%</span></div><div class="bar"><i style="--w:86%"></i></div></div>
+      <div class="prof reveal"><div class="prow"><span class="pname">Java · JavaScript</span><span class="pval">85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
+      <div class="prof reveal"><div class="prow"><span class="pname">K6 Performance · AWS Security</span><span class="pval">82%</span></div><div class="bar"><i style="--w:82%"></i></div></div>
+    </div>
+
+>>>>>>> Stashed changes
     <div class="skill-grid">
       <div class="skill-card">
         <h3>Automation & Security Testing</h3>
@@ -258,88 +456,114 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+<<<<<<< Updated upstream
 <section id="experience">
   <div class="wrap">
     <p class="sec-label"><span class="kw">describe(</span>'Work Experience'<span class="kw">)</span></p>
     <h2>Run history</h2>
 
     <div class="job">
+=======
+  <section id="experience" class="zone">
+    <p class="sec-label"><span class="kw">describe(</span>'Work Experience'<span class="kw">)</span></p>
+    <h2>Run history</h2>
+
+    <article class="job">
+>>>>>>> Stashed changes
       <div class="job-head">
         <h3>GenToo</h3>
-        <span class="job-meta">Bengaluru · Spain Product Launch · Jul 2025 — Present</span>
+        <span class="job-meta">Bengaluru · Spain Product Launch · Jul 2025 → Present</span>
       </div>
-      <p class="role">Senior Automation Engineer</p>
+      <span class="role">Senior Automation Engineer</span>
       <ul>
-        <li>Architected an API security automation framework with <b>Newman & Playwright</b>, covering OWASP API Top 10 and AWS WAF rule validation — <b>+70% automated test coverage</b>.</li>
-        <li>Designed banking cron automation for <b>ConnectPay</b> integrations enforcing AWS IAM least-privilege policies — <b>+40% reliability</b>.</li>
-        <li>Built a <b>K6 performance suite</b> simulating abuse-pattern loads to validate AWS GuardDuty thresholds — <b>25%+ faster API responses under peak load</b>.</li>
-        <li>Automated Android & iOS apps with <b>Appium + MobSF</b> static/dynamic security analysis — <b>-65% regression effort</b>.</li>
-        <li>Ran mobile security assessments across the <b>OWASP Mobile Top 10</b> (insecure IPC, exported components, SSL pinning) — <b>+30% security posture</b>.</li>
-        <li>Integrated GitHub Actions CI with <b>SonarQube SAST</b> (+45% code quality, -60% critical smells) and triaged ANRs/crashes via Firebase Crashlytics (-30% critical incidents).</li>
-        <li>Mentored junior QA engineers via code & test-case reviews (+35% sprint quality); managed JIRA workflows with Confluence docs (+50% audit readiness).</li>
+        <li>Architected an API security automation framework with <b>Newman & Playwright</b>, covering the OWASP API Top 10 and AWS WAF rule validation to lift automated test coverage by <b>70%</b>.</li>
+        <li>Designed banking cron automation for <b>ConnectPay</b> integrations, enforcing AWS IAM least-privilege policies and improving reliability by <b>40%</b>.</li>
+        <li>Built a <b>K6 performance suite</b> that simulates abuse-pattern loads against AWS GuardDuty anomaly thresholds, keeping API responses <b>25%+ faster</b> under peak load.</li>
+        <li>Automated Android & iOS apps with <b>Appium and MobSF</b> static/dynamic security analysis, cutting regression effort by <b>65%</b>.</li>
+        <li>Ran mobile security assessments across the <b>OWASP Mobile Top 10</b>, covering insecure IPC, exported components and SSL pinning, strengthening security posture by <b>30%</b>.</li>
+        <li>Integrated GitHub Actions CI with <b>SonarQube SAST</b>, raising code quality scores <b>45%</b> and cutting critical code smells <b>60%</b>, while triaging crashes in Firebase Crashlytics to reduce critical incidents by <b>30%</b>.</li>
+        <li>Mentored junior QA engineers through code and test-case reviews, lifting sprint deliverable quality <b>35%</b>, and managed JIRA workflows with Confluence documentation for <b>50%</b> better audit readiness.</li>
       </ul>
-    </div>
+    </article>
 
+<<<<<<< Updated upstream
     <div class="job">
+=======
+    <article class="job">
+>>>>>>> Stashed changes
       <div class="job-head">
         <h3>RapL Technologies</h3>
-        <span class="job-meta">Bengaluru · Dec 2022 — Jun 2025</span>
+        <span class="job-meta">Bengaluru · Dec 2022 → Jun 2025</span>
       </div>
-      <p class="role">Test Engineer</p>
+      <span class="role">Test Engineer</span>
       <ul>
-        <li>Led a <b>team of 5 QA engineers</b> across the full SDLC/STLC — <b>+45% team productivity</b> through task delegation and process optimization.</li>
-        <li>Built a scalable hybrid framework with <b>multi-browser parallel execution</b> (Selenium Grid) — <b>-40% test execution time</b>.</li>
-        <li>Integrated SonarQube into CI/CD, cutting <b>code duplication from 50% to 4%</b>.</li>
+        <li>Led a <b>team of 5 QA engineers</b> across the full SDLC/STLC, improving team productivity by <b>45%</b> through delegation and process optimization.</li>
+        <li>Built a scalable hybrid framework with <b>multi-browser parallel execution</b> on Selenium Grid, cutting test execution time by <b>40%</b>.</li>
+        <li>Integrated SonarQube into the CI/CD pipeline, reducing <b>code duplication from 50% to 4%</b>.</li>
         <li>Architected the mobile testing strategy, reducing validation time by <b>60%</b> and enabling faster releases.</li>
-        <li>Designed <b>1,000+ test scenarios</b> with 95% on-time delivery; test plans and traceability matrices raised coverage by 30% while cutting manual effort by <b>80%</b>.</li>
+        <li>Designed <b>1,000+ test scenarios</b> with 95% on-time delivery; traceability matrices raised coverage <b>30%</b> while cutting manual effort by <b>80%</b>.</li>
       </ul>
-    </div>
+    </article>
 
+<<<<<<< Updated upstream
     <div class="job">
+=======
+    <article class="job">
+>>>>>>> Stashed changes
       <div class="job-head">
         <h3>QuickMove Technologies</h3>
-        <span class="job-meta">Bengaluru · Jul 2022 — Sep 2022</span>
+        <span class="job-meta">Bengaluru · Jul 2022 → Sep 2022</span>
       </div>
-      <p class="role">Full Stack Developer Trainee</p>
+      <span class="role">Full Stack Developer Trainee</span>
       <ul>
-        <li>Intensive training in <b>ASP.NET, C#, MySQL, JavaScript</b> for enterprise ERP/CRM development.</li>
+        <li>Completed intensive training in <b>ASP.NET, C#, MySQL and JavaScript</b> for enterprise ERP/CRM development.</li>
         <li>Improved ERP system efficiency by <b>25%</b> through Agile implementation and database optimization.</li>
       </ul>
-    </div>
+    </article>
 
+<<<<<<< Updated upstream
     <div class="job">
+=======
+    <article class="job">
+>>>>>>> Stashed changes
       <div class="job-head">
         <h3>HKIT Security Solutions</h3>
-        <span class="job-meta">Bengaluru · Jul 2020 — May 2022</span>
+        <span class="job-meta">Bengaluru · Jul 2020 → May 2022</span>
       </div>
-      <p class="role">IT Security Analyst</p>
+      <span class="role">IT Security Analyst</span>
       <ul>
         <li>Conducted <b>web application security testing</b> across authentication, session management and input validation, aligned to the <b>OWASP Top 10</b>.</li>
-        <li>Performed <b>system security audits</b> assessing infrastructure configurations, access controls and security baselines, recommending hardening measures.</li>
-        <li>Supported <b>Governance, Risk and Compliance (GRC)</b> activities — risk assessments, policy documentation and compliance reporting.</li>
-        <li>Produced structured <b>vulnerability remediation reports</b>, communicating risk impact to technical and non-technical stakeholders.</li>
+        <li>Performed <b>system security audits</b> of infrastructure configurations, access controls and security baselines, recommending hardening measures.</li>
+        <li>Supported <b>Governance, Risk and Compliance (GRC)</b> activities including risk assessments, policy documentation and compliance reporting.</li>
+        <li>Produced structured <b>vulnerability remediation reports</b> that communicate risk impact to technical and non-technical stakeholders.</li>
       </ul>
-    </div>
+    </article>
 
+<<<<<<< Updated upstream
     <div class="job">
+=======
+    <article class="job">
+>>>>>>> Stashed changes
       <div class="job-head">
         <h3>Mphasis Limited</h3>
-        <span class="job-meta">Bengaluru · Client: TD Bank, Canada · Sep 2019 — Jun 2020</span>
+        <span class="job-meta">Bengaluru · Client: TD Bank, Canada · Sep 2019 → Jun 2020</span>
       </div>
-      <p class="role">Technical Support Associate — SD</p>
+      <span class="role">Technical Support Associate · SD</span>
       <ul>
         <li>Delivered <b>L1/L2 support</b> for critical banking applications with high-volume SLA compliance.</li>
-        <li>Reproduced production issues in test environments with root cause analysis — <b>-25% repeat incidents</b>, and <b>+30% faster developer fixes</b> via detailed defect logging.</li>
+        <li>Reproduced production issues in test environments with root cause analysis, cutting repeat incidents <b>25%</b> and speeding developer fix turnaround by <b>30%</b>.</li>
       </ul>
-    </div>
-  </div>
-</section>
+    </article>
+  </section>
 
+<<<<<<< Updated upstream
 <section id="achievements">
   <div class="wrap">
+=======
+  <section id="achievements" class="zone">
+>>>>>>> Stashed changes
     <p class="sec-label"><span class="kw">describe(</span>'Achievements & Certifications'<span class="kw">)</span></p>
     <h2>Badges earned</h2>
     <div class="ach-grid">
@@ -351,7 +575,7 @@
       <div class="ach">
         <span class="badge">LEADERSHIP</span>
         <h3>Productivity Leadership</h3>
-        <p>Spearheaded team wellness initiatives — circadian rhythm optimization, fitness and work-life balance — improving team focus and productivity metrics.</p>
+        <p>Spearheaded team wellness initiatives around circadian rhythm optimization, fitness and work-life balance, improving team focus and productivity metrics.</p>
       </div>
       <div class="ach">
         <span class="badge">MENTORSHIP</span>
@@ -370,28 +594,177 @@
       </div>
       <div class="edu" style="grid-column:1/-1">
         <h3>Bachelor of Computer Applications</h3>
-        <p>New Horizon Educational Institution, Bengaluru · 2016 — 2019</p>
+        <p>New Horizon Educational Institution, Bengaluru · 2016 → 2019</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+<<<<<<< Updated upstream
 <section id="contact" class="contact" style="border-bottom:none">
   <div class="wrap">
     <p class="sec-label" style="text-align:center"><span class="kw">it(</span>'should get in touch'<span class="kw">)</span></p>
     <h2>Let's build something reliable</h2>
     <p>Open to senior automation, SDET, application security and DevSecOps roles — and interesting conversations about testing, security and CI/CD.</p>
+=======
+  <section id="contact" class="zone contact" style="border-bottom:none">
+    <p class="sec-label" style="text-align:center"><span class="kw">it(</span>'should get in touch'<span class="kw">)</span></p>
+    <h2>Let's build something reliable</h2>
+    <p>Open to senior automation, SDET, application security and DevSecOps roles, and interesting conversations about testing, security and CI/CD.</p>
+>>>>>>> Stashed changes
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:kushkpkp@gmail.com">kushkpkp@gmail.com</a>
       <a class="btn btn-ghost" href="tel:+917019214577">+91 70192 14577</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/kushal-prakasam-704116156/" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
-  <span class="p">✓</span> all tests passed — © 2026 J P Kushal Prakasam · Bengaluru, India
+  <span class="p">◈</span> end of line · © 2026 J P Kushal Prakasam · Bengaluru, India
 </footer>
 
+<<<<<<< Updated upstream
+=======
+<script>
+  (function(){
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---- Scroll-triggered reveal for cards & stats ----
+    var els = document.querySelectorAll('.reveal');
+    if (reduced || !('IntersectionObserver' in window)) {
+      els.forEach(function(el){ el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el){ io.observe(el); });
+    }
+
+    // ---- Energy conduit: fill height tracks the viewer's scroll position ----
+    var flow = document.querySelector('.flow-in');
+    var fill = document.querySelector('.conduit .fill');
+    var head = document.querySelector('.conduit .head');
+    var targets = document.querySelectorAll('.zone, .job');
+
+    if (flow && fill && head) {
+      if (reduced) {
+        // No motion: everything lit, conduit fully charged.
+        fill.style.height = '100%';
+        head.style.display = 'none';
+        targets.forEach(function(el){ el.classList.add('lit'); });
+      } else {
+        var ticking = false;
+        var update = function(){
+          ticking = false;
+          var r = flow.getBoundingClientRect();
+          var focus = window.innerHeight * 0.55;   // the viewer's focus line
+          var y = Math.max(0, Math.min(r.height, focus - r.top));
+          fill.style.height = y + 'px';
+          head.style.top = y + 'px';
+          targets.forEach(function(el){
+            var t = el.getBoundingClientRect().top - r.top;
+            el.classList.toggle('lit', t < y + 30);
+          });
+        };
+        var onScroll = function(){
+          if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+      }
+    }
+
+    // ---- Ambient music toggle ----
+    // Tries "music.mp3" from the repo if you've added a track you own the rights to;
+    // otherwise generates an original Tron-style synth loop live in the browser.
+    var btn = document.getElementById('music-btn');
+    if (!btn) return;
+    var playing = false;
+    var audioEl;
+    var useSynth = false;
+    var ctx = null, master = null, timer = null;
+
+    function setUI(on){
+      playing = on;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.textContent = on ? '♪ sound: on' : '♪ sound: off';
+    }
+
+    function startSynth(){
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      ctx = new AC();
+      master = ctx.createGain();
+      master.gain.value = 0.0;
+      var filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 900;
+      filter.Q.value = 6;
+      master.connect(filter);
+      filter.connect(ctx.destination);
+      master.gain.linearRampToValueAtTime(0.14, ctx.currentTime + 2.5);
+
+      var lfo = ctx.createOscillator(), lfoGain = ctx.createGain();
+      lfo.frequency.value = 0.05; lfoGain.gain.value = 420;
+      lfo.connect(lfoGain); lfoGain.connect(filter.frequency); lfo.start();
+
+      [34.65, 69.30].forEach(function(f, i){
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = 'sawtooth'; o.frequency.value = f; o.detune.value = i ? 7 : -7;
+        g.gain.value = 0.35;
+        o.connect(g); g.connect(master); o.start();
+      });
+
+      var notes = [138.59, 164.81, 207.65, 246.94, 311.13, 246.94, 207.65, 164.81];
+      var step = 0, beat = 0.55;
+      timer = setInterval(function(){
+        if (!ctx) return;
+        var t = ctx.currentTime;
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = 'triangle';
+        o.frequency.value = notes[step % notes.length];
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(0.22, t + 0.04);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + beat * 1.8);
+        o.connect(g); g.connect(master);
+        o.start(t); o.stop(t + beat * 2);
+        step++;
+      }, beat * 1000);
+    }
+
+    function stopSynth(){
+      if (timer) { clearInterval(timer); timer = null; }
+      if (ctx) {
+        var c = ctx, m = master;
+        ctx = null; master = null;
+        if (m) m.gain.linearRampToValueAtTime(0.0, c.currentTime + 0.6);
+        setTimeout(function(){ c.close(); }, 800);
+      }
+    }
+
+    btn.addEventListener('click', function(){
+      if (playing) {
+        if (audioEl) audioEl.pause();
+        stopSynth();
+        setUI(false);
+        return;
+      }
+      setUI(true);
+      if (useSynth) { startSynth(); return; }
+      if (!audioEl) {
+        audioEl = new Audio('music.mp3');
+        audioEl.loop = true; audioEl.volume = 0.45;
+      }
+      audioEl.play().catch(function(){
+        audioEl = null; useSynth = true; startSynth();
+      });
+    });
+  })();
+</script>
+
+>>>>>>> Stashed changes
 </body>
 </html>
