@@ -31,14 +31,8 @@
   a{color:var(--amber);text-decoration:none}
   a:hover{text-decoration:underline}
   a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
-  /* ---------- scroll reveal ---------- */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
-  .reveal:nth-child(2){transition-delay:.08s}
-  .reveal:nth-child(3){transition-delay:.16s}
-  .reveal:nth-child(4){transition-delay:.24s}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
   /* ---------- nav ---------- */
   nav{position:sticky;top:0;z-index:50;background:rgba(10,15,26,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -51,14 +45,14 @@
   @media(max-width:720px){.nav-links{display:none}}
 
   /* ---------- hero ---------- */
-  header{padding:80px 0 72px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+  header{padding:88px 0 72px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
   header::before{content:"";position:absolute;inset:0;background:
-    radial-gradient(600px 300px at 78% 30%,rgba(242,176,74,.08),transparent 70%),
+    radial-gradient(600px 300px at 80% 0%,rgba(242,176,74,.07),transparent 70%),
     radial-gradient(500px 320px at 10% 100%,rgba(57,217,138,.05),transparent 70%);pointer-events:none}
-  .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center;position:relative}
-  @media(max-width:880px){.hero{grid-template-columns:1fr;gap:56px}}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;position:relative}
+  @media(max-width:860px){.hero{grid-template-columns:1fr}}
   .eyebrow{font-family:var(--mono);font-size:13px;color:var(--pass);letter-spacing:.04em;margin-bottom:18px}
-  h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,62px);line-height:1.02;letter-spacing:-.02em;text-transform:uppercase}
+  h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,64px);line-height:1.02;letter-spacing:-.02em;text-transform:uppercase}
   h1 .accent{color:var(--amber)}
   .tagline{margin-top:20px;color:var(--muted);font-size:17px;max-width:46ch}
   .tagline strong{color:var(--ink);font-weight:600}
@@ -70,51 +64,30 @@
   .btn-ghost{color:var(--ink)}
   .btn-ghost:hover{border-color:var(--muted)}
 
-  /* ---------- ENERGY CORE ---------- */
-  .core-wrap{position:relative;width:min(420px,88vw);aspect-ratio:1;margin:0 auto}
-  .core-center{position:absolute;inset:33%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
-    background:radial-gradient(circle at 38% 32%,#1c2a48,#0d1526 70%);
-    border:1px solid rgba(242,176,74,.45);
-    box-shadow:0 0 34px rgba(242,176,74,.28),0 0 90px rgba(242,176,74,.14),inset 0 0 30px rgba(242,176,74,.12);
-    animation:pulse 3.2s ease-in-out infinite}
-  .core-center b{font-family:var(--display);font-weight:900;font-size:clamp(38px,9vw,52px);color:var(--amber);line-height:1;text-shadow:0 0 22px rgba(242,176,74,.55)}
-  .core-center span{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:var(--muted);margin-top:6px;text-align:center}
-  @keyframes pulse{
-    0%,100%{box-shadow:0 0 34px rgba(242,176,74,.28),0 0 90px rgba(242,176,74,.14),inset 0 0 30px rgba(242,176,74,.12)}
-    50%{box-shadow:0 0 48px rgba(242,176,74,.42),0 0 120px rgba(242,176,74,.2),inset 0 0 40px rgba(242,176,74,.18)}
-  }
-  .ring{position:absolute;border-radius:50%;border:1px dashed rgba(139,152,173,.28)}
-  .ring.r1{inset:16%}
-  .ring.r2{inset:1%;border-color:rgba(139,152,173,.18)}
-  .spark{position:absolute;inset:16%;border-radius:50%;animation:spin 14s linear infinite}
-  .spark::before{content:"";position:absolute;top:-3px;left:50%;width:6px;height:6px;border-radius:50%;background:var(--pass);box-shadow:0 0 10px var(--pass)}
-  .rot{position:absolute;inset:1%;animation:spin 46s linear infinite}
-  .rot .node{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);animation:cspin 46s linear infinite}
-  .rot:nth-of-type(1),.rot:nth-of-type(1) .node{animation-delay:0s}
-  .rot:nth-of-type(2),.rot:nth-of-type(2) .node{animation-delay:-9.2s}
-  .rot:nth-of-type(3),.rot:nth-of-type(3) .node{animation-delay:-18.4s}
-  .rot:nth-of-type(4),.rot:nth-of-type(4) .node{animation-delay:-27.6s}
-  .rot:nth-of-type(5),.rot:nth-of-type(5) .node{animation-delay:-36.8s}
-  .node{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink);background:var(--panel);
-    border:1px solid var(--line);border-radius:999px;padding:6px 13px;white-space:nowrap;
-    box-shadow:0 6px 18px rgba(0,0,0,.45)}
-  .node em{font-style:normal;color:var(--pass);margin-right:6px}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  @keyframes cspin{to{transform:translate(-50%,-50%) rotate(-360deg)}}
-  .core-cap{margin-top:18px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
-
+  /* terminal */
+  .term{background:#0b1120;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 24px 60px rgba(0,0,0,.45);overflow:hidden}
+  .term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .dot:nth-child(1){background:#f0645c}.dot:nth-child(2){background:#f2b04a}.dot:nth-child(3){background:#39d98a}
+  .term-title{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .term-body{padding:20px;font-family:var(--mono);font-size:13.5px;line-height:2}
+  .t-cmd{color:var(--muted)}
+  .t-cmd .prompt{color:var(--amber)}
+  .t-line{opacity:0;transform:translateY(3px);animation:tin .35s ease forwards}
+  .t-pass{color:var(--pass)}
+  .t-dim{color:var(--muted)}
+  .t-sum{color:var(--ink);font-weight:600}
+  .t-line:nth-of-type(2){animation-delay:.5s}
+  .t-line:nth-of-type(3){animation-delay:1s}
+  .t-line:nth-of-type(4){animation-delay:1.5s}
+  .t-line:nth-of-type(5){animation-delay:2s}
+  .t-line:nth-of-type(6){animation-delay:2.5s}
+  .t-line:nth-of-type(7){animation-delay:3s}
+  .t-line:nth-of-type(8){animation-delay:3.6s}
+  @keyframes tin{to{opacity:1;transform:none}}
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .reveal{opacity:1;transform:none;transition:none}
-    .core-center{animation:none}
-    .spark{display:none}
-    .rot,.rot .node{animation:none}
-    .rot:nth-of-type(1){transform:rotate(0deg)}.rot:nth-of-type(1) .node{transform:translate(-50%,-50%) rotate(0deg)}
-    .rot:nth-of-type(2){transform:rotate(72deg)}.rot:nth-of-type(2) .node{transform:translate(-50%,-50%) rotate(-72deg)}
-    .rot:nth-of-type(3){transform:rotate(144deg)}.rot:nth-of-type(3) .node{transform:translate(-50%,-50%) rotate(-144deg)}
-    .rot:nth-of-type(4){transform:rotate(216deg)}.rot:nth-of-type(4) .node{transform:translate(-50%,-50%) rotate(-216deg)}
-    .rot:nth-of-type(5){transform:rotate(288deg)}.rot:nth-of-type(5) .node{transform:translate(-50%,-50%) rotate(-288deg)}
-    .bar i{transition:none}
+    .t-line{animation:none;opacity:1;transform:none}
   }
 
   /* ---------- sections ---------- */
@@ -129,18 +102,6 @@
   .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
   .stat b{font-family:var(--display);font-size:28px;font-weight:800;color:var(--amber);display:block;line-height:1.1}
   .stat span{font-family:var(--mono);font-size:12px;color:var(--muted)}
-
-  /* ---------- proficiency bars ---------- */
-  .prof-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;margin-bottom:44px}
-  @media(max-width:760px){.prof-grid{grid-template-columns:1fr}}
-  .prof{font-family:var(--mono);font-size:13px}
-  .prof .prow{display:flex;justify-content:space-between;margin-bottom:7px}
-  .prof .pname{color:var(--ink)}
-  .prof .pval{color:var(--pass)}
-  .bar{height:7px;background:var(--panel-2);border:1px solid var(--line);border-radius:999px;overflow:hidden}
-  .bar i{display:block;height:100%;width:0;border-radius:999px;
-    background:linear-gradient(90deg,var(--pass),var(--amber));transition:width 1.2s cubic-bezier(.25,.8,.3,1)}
-  .in .bar i{width:var(--w)}
 
   /* skills */
   .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -181,7 +142,7 @@
   .edu p{font-family:var(--mono);font-size:13px;color:var(--muted)}
 
   /* contact */
-  .contact{text-align:center;padding:90px 0}
+  .contact{ text-align:center;padding:90px 0}
   .contact h2{margin-bottom:14px}
   .contact p{color:var(--muted);max-width:52ch;margin:0 auto 30px}
   .contact-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
@@ -216,29 +177,30 @@
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/kushal-prakasam-704116156/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
-    <div>
-      <!-- ENERGY CORE: years of experience at the center, career orbit around it -->
-      <div class="core-wrap" aria-label="6 years of experience across GenToo, RapL, QuickMove, HKIT Security and Mphasis">
-        <div class="ring r1"></div>
-        <div class="ring r2"></div>
-        <div class="spark"></div>
-        <div class="rot"><span class="node"><em>●</em>GenToo</span></div>
-        <div class="rot"><span class="node"><em>●</em>RapL</span></div>
-        <div class="rot"><span class="node"><em>●</em>QuickMove</span></div>
-        <div class="rot"><span class="node"><em>●</em>HKIT Security</span></div>
-        <div class="rot"><span class="node"><em>●</em>Mphasis</span></div>
-        <div class="core-center"><b>6</b><span>YEARS OF<br>EXPERIENCE</span></div>
+    <div class="term" aria-label="Terminal showing test run results">
+      <div class="term-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="term-title">kushal — test-runner</span>
       </div>
-      <p class="core-cap">// career orbit — automation · security · quality</p>
+      <div class="term-body">
+        <div class="t-cmd t-line"><span class="prompt">$</span> npx run kushal --profile</div>
+        <div class="t-line"><span class="t-pass">✓</span> builds parallel automation frameworks <span class="t-dim">(Selenium · Playwright · Appium)</span></div>
+        <div class="t-line"><span class="t-pass">✓</span> 95% test automation coverage <span class="t-dim">(-40% execution time)</span></div>
+        <div class="t-line"><span class="t-pass">✓</span> mobile & API security validated <span class="t-dim">(OWASP Top 10 · MobSF · K6)</span></div>
+        <div class="t-line"><span class="t-pass">✓</span> security audits, GRC & DevSecOps <span class="t-dim">(AWS WAF · GuardDuty · IAM · SAST)</span></div>
+        <div class="t-line"><span class="t-pass">✓</span> 1,500+ critical bugs hunted down <span class="t-dim">("Best Bug Hunter")</span></div>
+        <div class="t-line t-sum">6 checks passed, 0 failed <span class="t-dim">— ready for production</span></div>
+        <div class="t-line t-dim">_</div>
+      </div>
     </div>
   </div>
 </header>
 
 <section id="about">
   <div class="wrap">
-    <p class="sec-label reveal"><span class="kw">describe(</span>'About'<span class="kw">)</span></p>
-    <h2 class="reveal">Quality is a feature</h2>
-    <p class="reveal" style="max-width:70ch;color:#c3cddd;font-size:16.5px">
+    <p class="sec-label"><span class="kw">describe(</span>'About'<span class="kw">)</span></p>
+    <h2>Quality is a feature</h2>
+    <p style="max-width:70ch;color:#c3cddd;font-size:16.5px">
       I design the safety nets that let teams ship fast without breaking things — and without getting breached. My work
       spans two disciplines: architecting parallel automation frameworks with <b>Selenium, Playwright, Appium and REST
       Assured</b>, and hands-on security engineering — <b>web application testing, system security audits, GRC</b>,
@@ -248,33 +210,20 @@
       security-hardened products for regulated fintech environments.
     </p>
     <div class="stats">
-      <div class="stat reveal"><b>6</b><span>years automation + security</span></div>
-      <div class="stat reveal"><b>95%</b><span>automation coverage</span></div>
-      <div class="stat reveal"><b>1,500+</b><span>critical bugs found</span></div>
-      <div class="stat reveal"><b>10+</b><span>engineers mentored</span></div>
+      <div class="stat"><b>6</b><span>years automation + security</span></div>
+      <div class="stat"><b>95%</b><span>automation coverage</span></div>
+      <div class="stat"><b>1,500+</b><span>critical bugs found</span></div>
+      <div class="stat"><b>10+</b><span>engineers mentored</span></div>
     </div>
   </div>
 </section>
 
 <section id="skills">
   <div class="wrap">
-    <p class="sec-label reveal"><span class="kw">describe(</span>'Stack & Proficiency'<span class="kw">)</span></p>
-    <h2 class="reveal">Toolbelt</h2>
-
-    <!-- PROFICIENCY BARS: --w controls the fill percentage -->
-    <div class="prof-grid">
-      <div class="prof reveal"><div class="prow"><span class="pname">Selenium WebDriver</span><span class="pval">95%</span></div><div class="bar"><i style="--w:95%"></i></div></div>
-      <div class="prof reveal"><div class="prow"><span class="pname">API Testing · REST Assured</span><span class="pval">92%</span></div><div class="bar"><i style="--w:92%"></i></div></div>
-      <div class="prof reveal"><div class="prow"><span class="pname">Playwright</span><span class="pval">90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
-      <div class="prof reveal"><div class="prow"><span class="pname">CI/CD · GitHub Actions · SonarQube</span><span class="pval">90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
-      <div class="prof reveal"><div class="prow"><span class="pname">Appium (Android/iOS)</span><span class="pval">88%</span></div><div class="bar"><i style="--w:88%"></i></div></div>
-      <div class="prof reveal"><div class="prow"><span class="pname">Security Testing · OWASP · MobSF</span><span class="pval">86%</span></div><div class="bar"><i style="--w:86%"></i></div></div>
-      <div class="prof reveal"><div class="prow"><span class="pname">Java · JavaScript</span><span class="pval">85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
-      <div class="prof reveal"><div class="prow"><span class="pname">K6 Performance · AWS Security</span><span class="pval">82%</span></div><div class="bar"><i style="--w:82%"></i></div></div>
-    </div>
-
+    <p class="sec-label"><span class="kw">describe(</span>'Core Competencies'<span class="kw">)</span></p>
+    <h2>Toolbelt</h2>
     <div class="skill-grid">
-      <div class="skill-card reveal">
+      <div class="skill-card">
         <h3>Automation & Security Testing</h3>
         <div class="chips">
           <span class="chip">Selenium WebDriver</span><span class="chip">Playwright</span><span class="chip">Appium (Android/iOS)</span>
@@ -284,7 +233,7 @@
           <span class="chip">E2E Testing</span><span class="chip">Regression Testing</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card">
         <h3>Programming & Tools</h3>
         <div class="chips">
           <span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">REST Assured</span>
@@ -292,7 +241,7 @@
           <span class="chip">SQL Server</span><span class="chip">Git / GitHub</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card">
         <h3>DevOps & CI/CD</h3>
         <div class="chips">
           <span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">Docker</span>
@@ -300,7 +249,7 @@
           <span class="chip">Firebase Crashlytics</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card">
         <h3>Quality Management</h3>
         <div class="chips">
           <span class="chip">JIRA</span><span class="chip">Confluence</span><span class="chip">Test Planning</span>
@@ -314,10 +263,10 @@
 
 <section id="experience">
   <div class="wrap">
-    <p class="sec-label reveal"><span class="kw">describe(</span>'Work Experience'<span class="kw">)</span></p>
-    <h2 class="reveal">Run history</h2>
+    <p class="sec-label"><span class="kw">describe(</span>'Work Experience'<span class="kw">)</span></p>
+    <h2>Run history</h2>
 
-    <div class="job reveal">
+    <div class="job">
       <div class="job-head">
         <h3>GenToo</h3>
         <span class="job-meta">Bengaluru · Spain Product Launch · Jul 2025 — Present</span>
@@ -334,7 +283,7 @@
       </ul>
     </div>
 
-    <div class="job reveal">
+    <div class="job">
       <div class="job-head">
         <h3>RapL Technologies</h3>
         <span class="job-meta">Bengaluru · Dec 2022 — Jun 2025</span>
@@ -349,7 +298,7 @@
       </ul>
     </div>
 
-    <div class="job reveal">
+    <div class="job">
       <div class="job-head">
         <h3>QuickMove Technologies</h3>
         <span class="job-meta">Bengaluru · Jul 2022 — Sep 2022</span>
@@ -361,7 +310,7 @@
       </ul>
     </div>
 
-    <div class="job reveal">
+    <div class="job">
       <div class="job-head">
         <h3>HKIT Security Solutions</h3>
         <span class="job-meta">Bengaluru · Jul 2020 — May 2022</span>
@@ -375,7 +324,7 @@
       </ul>
     </div>
 
-    <div class="job reveal">
+    <div class="job">
       <div class="job-head">
         <h3>Mphasis Limited</h3>
         <span class="job-meta">Bengaluru · Client: TD Bank, Canada · Sep 2019 — Jun 2020</span>
@@ -391,35 +340,35 @@
 
 <section id="achievements">
   <div class="wrap">
-    <p class="sec-label reveal"><span class="kw">describe(</span>'Achievements & Certifications'<span class="kw">)</span></p>
-    <h2 class="reveal">Badges earned</h2>
+    <p class="sec-label"><span class="kw">describe(</span>'Achievements & Certifications'<span class="kw">)</span></p>
+    <h2>Badges earned</h2>
     <div class="ach-grid">
-      <div class="ach reveal">
+      <div class="ach">
         <span class="badge">AWARD</span>
         <h3>"Best Bug Hunter"</h3>
         <p>Recognized for identifying and resolving 1,500+ critical bugs within 24 months, significantly improving software quality and customer satisfaction.</p>
       </div>
-      <div class="ach reveal">
+      <div class="ach">
         <span class="badge">LEADERSHIP</span>
         <h3>Productivity Leadership</h3>
         <p>Spearheaded team wellness initiatives — circadian rhythm optimization, fitness and work-life balance — improving team focus and productivity metrics.</p>
       </div>
-      <div class="ach reveal">
+      <div class="ach">
         <span class="badge">MENTORSHIP</span>
         <h3>Technical Mentorship</h3>
         <p>Mentored 10+ junior engineers on automation best practices and sustainable productivity habits.</p>
       </div>
     </div>
     <div class="edu-grid" style="margin-top:18px">
-      <div class="edu reveal">
+      <div class="edu">
         <h3>ISTQB Foundation Level Certified Tester</h3>
         <p>International Software Testing Qualifications Board · 2024</p>
       </div>
-      <div class="edu reveal">
+      <div class="edu">
         <h3>CCNA Routing & Switching</h3>
         <p>Cisco Networking Academy · 2019</p>
       </div>
-      <div class="edu reveal" style="grid-column:1/-1">
+      <div class="edu" style="grid-column:1/-1">
         <h3>Bachelor of Computer Applications</h3>
         <p>New Horizon Educational Institution, Bengaluru · 2016 — 2019</p>
       </div>
@@ -429,10 +378,10 @@
 
 <section id="contact" class="contact" style="border-bottom:none">
   <div class="wrap">
-    <p class="sec-label reveal" style="text-align:center"><span class="kw">it(</span>'should get in touch'<span class="kw">)</span></p>
-    <h2 class="reveal">Let's build something reliable</h2>
-    <p class="reveal">Open to senior automation, SDET, application security and DevSecOps roles — and interesting conversations about testing, security and CI/CD.</p>
-    <div class="contact-links reveal">
+    <p class="sec-label" style="text-align:center"><span class="kw">it(</span>'should get in touch'<span class="kw">)</span></p>
+    <h2>Let's build something reliable</h2>
+    <p>Open to senior automation, SDET, application security and DevSecOps roles — and interesting conversations about testing, security and CI/CD.</p>
+    <div class="contact-links">
       <a class="btn btn-primary" href="mailto:kushkpkp@gmail.com">kushkpkp@gmail.com</a>
       <a class="btn btn-ghost" href="tel:+917019214577">+91 70192 14577</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/kushal-prakasam-704116156/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -443,23 +392,6 @@
 <footer>
   <span class="p">✓</span> all tests passed — © 2026 J P Kushal Prakasam · Bengaluru, India
 </footer>
-
-<script>
-  // Scroll-triggered reveal: elements with .reveal fade in the first time they enter the viewport.
-  (function(){
-    var els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) {
-      els.forEach(function(el){ el.classList.add('in'); });
-      return;
-    }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    els.forEach(function(el){ io.observe(el); });
-  })();
-</script>
 
 </body>
 </html>
